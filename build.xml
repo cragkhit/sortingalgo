@@ -1,0 +1,14 @@
+<project name="SortingAlgorithm" default="dist">
+	<target name="compile">
+		<mkdir dir="classes" />
+		<javac srcdir="." destdir="classes" />
+	</target>
+	<target name="dist" depends="compile">
+		<mkdir dir="lib" />
+		<jar jarfile="lib/sorting.jar" basedir="classes" />
+	</target>
+	<target name="clean">
+		<delete dir="classes" />
+		<delete dir="lib" />
+	</target>
+</project>
